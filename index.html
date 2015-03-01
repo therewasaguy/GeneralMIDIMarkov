@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<!--     <script data-main="js/app.js" src="lib/require.js"></script> -->
+
+    <script language="javascript" type="text/javascript" src="./lib/p5.js"></script> 
+    <script language="javascript" type="text/javascript" src="./lib/ToneR3.min.js"></script> 
+
+    <script language="javascript" type="text/javascript" src="./lib/MIDI.js/build/MIDI.js"></script> 
+    <script language="javascript" type="text/javascript" src="./lib/MIDI.js/inc/Base64.js" ></script>
+    <script language="javascript" type="text/javascript" src="./lib/MIDI.js/inc/base64binary.js"></script>
+<!--     <script language="javascript" type="text/javascript" src="./lib/jasmid/stream.js"></script> 
+    <script language="javascript" type="text/javascript" src="./lib/jasmid/midifile.js"></script> 
+ -->
+    <!-- <script language="javascript" type="text/javascript" src="../lib/Tone/Tone.min.js"></script>  -->
+
+    <script language="javascript" type="text/javascript" src="./markov.js"></script> 
+
+    <script language="javascript" type="text/javascript" src="sketch.js"></script> 
+    <script language="javascript" type="text/javascript" src="makeSpeech.js"></script> 
+
+    <script language="javascript" type="text/javascript" src="midiLoader.js"></script>
+
+    <script language="javascript" type="text/javascript" src="sequencePlayer.js"></script>
+
+    <script>
+      window.onload = function() {
+        console.log('loaded');
+        loadRemote('midifiles/stevie_wonder-superstition.mid', sendMidiToWorker);
+      }
+    </script>
+
+  <style> 
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #1F1F1F;
+    }
+
+    #leftBar {
+      width: 200px;
+    }
+
+    select {
+      font-size: 32px;
+      padding: 10px;
+      margin: 0px;
+    }
+
+    h2 {
+      color: #ff0000;
+      background-color: #ffff00;
+      line-height: 100%;
+    }
+
+    #canvases {
+      padding:0px;
+    }
+
+    </style>
+</head>
+
+<body>
+  <div id="leftBar">
+
+  </div>
+
+  <div id="canvases">
+
+  </div>
+
+</body>
+
+</html>
